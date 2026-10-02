@@ -1,6 +1,6 @@
 {
   "name": "notamify",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Retrieve NOTAM source data, affected infrastructure and flight briefings with Notamify SSO. Uses existing API credits at discounted MCP rates.",
   "author": {
     "name": "Skymerse Inc.",

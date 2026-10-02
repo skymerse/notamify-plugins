@@ -1,6 +1,6 @@
 # Notamify
 
-Retrieve NOTAM source information, affected infrastructure and informational flight briefings with your existing Notamify account with API credits. Sign in with Notamify SSO; no customer API keys are needed.
+Retrieve NOTAM source information, affected infrastructure and informational flight briefings with your existing Notamify account and API credits. Sign in with Notamify SSO; no customer API keys are needed. If the existing balance cannot cover an operation, the plugin explains that requirement without initiating a purchase or upgrade.
 
 MCP endpoint: `https://mcp.notamify.com/mcp`.
 
