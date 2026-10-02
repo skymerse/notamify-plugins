@@ -1,7 +1,7 @@
 {
   "name": "notamify",
-  "version": "1.1.1",
-  "description": "Retrieve NOTAM source data, affected infrastructure and flight briefings with Notamify SSO. Active Notamify Pro subscription required.",
+  "version": "1.2.0",
+  "description": "Retrieve NOTAM source data, affected infrastructure and flight briefings with Notamify SSO. Uses existing API credits at discounted MCP rates.",
   "author": {
     "name": "Skymerse Inc.",
     "email": "hello@notamify.com",
@@ -19,7 +19,7 @@
   "interface": {
     "displayName": "Notamify",
     "shortDescription": "NOTAMs and flight briefings",
-    "longDescription": "Retrieve current, nearby and historical NOTAMs, inspect affected aviation infrastructure, and generate airport and flight briefings. Preserve original identifiers, validity and conditions while exploring source information. Connect with your existing Notamify account using SSO; an active Notamify Pro subscription is required. Generated interpretations and briefings are informational and must be checked against official aviation sources before operational use. No customer API key is required. The plugin does not sell subscriptions or make purchases.",
+    "longDescription": "Retrieve current, nearby and historical NOTAMs, inspect affected aviation infrastructure, and generate airport and flight briefings. Preserve original identifiers, validity and conditions while exploring source information. Connect with your existing Notamify account using SSO; operations use your API credits at discounted MCP rates, with pages fetched together charged once. Generated interpretations and briefings are informational and must be checked against official aviation sources before operational use. No customer API key is required. The plugin does not sell subscriptions or make purchases.",
     "developerName": "Skymerse Inc.",
     "category": "Productivity",
     "capabilities": [
@@ -46,7 +46,7 @@
       "interface": {
         "displayName": "Notamify",
         "shortDescription": "NOTAMs and flight briefings",
-        "longDescription": "Retrieve current, nearby and historical NOTAMs, inspect affected aviation infrastructure, and generate airport and flight briefings. Preserve original identifiers, validity and conditions while exploring source information. Connect with your existing Notamify account using SSO; an active Notamify Pro subscription is required. Generated interpretations and briefings are informational and must be checked against official aviation sources before operational use. No customer API key is required. The plugin does not sell subscriptions or make purchases.",
+        "longDescription": "Retrieve current, nearby and historical NOTAMs, inspect affected aviation infrastructure, and generate airport and flight briefings. Preserve original identifiers, validity and conditions while exploring source information. Connect with your existing Notamify account using SSO; operations use your API credits at discounted MCP rates, with pages fetched together charged once. Generated interpretations and briefings are informational and must be checked against official aviation sources before operational use. No customer API key is required. The plugin does not sell subscriptions or make purchases.",
         "developerName": "Skymerse Inc.",
         "category": "Productivity",
         "capabilities": [
@@ -71,7 +71,7 @@
       "onboardingSkill": "./skills/notam-briefing/SKILL.md",
       "review": {
         "commerce": false,
-        "commerce_description": "Users access features included in an existing Notamify Pro subscription. The plugin has no subscription, upgrade, checkout or purchase tools.",
+        "commerce_description": "Users consume existing Notamify API credits at discounted MCP rates. The plugin has no subscription, upgrade, checkout or purchase tools.",
         "test_cases": {
           "positive": [
             {

@@ -1,12 +1,12 @@
 # Notamify
 
-Retrieve NOTAM source information, affected infrastructure and informational flight briefings with your existing Notamify Pro account. Sign in with Notamify SSO; no customer API keys are needed.
+Retrieve NOTAM source information, affected infrastructure and informational flight briefings with your existing Notamify account with API credits. Sign in with Notamify SSO; no customer API keys are needed.
 
 MCP endpoint: `https://mcp.notamify.com/mcp`.
 
 Setup, downloads and support: [Notamify integrations](https://mcp.notamify.com/integrations/).
 
-For Claude Code, load the downloaded ZIP with `claude --plugin-dir /absolute/path/to/notamify-plugin.zip`, run `/mcp` and complete Notamify authentication. For Codex or ChatGPT, install from a configured local marketplace or use a custom OAuth MCP connection until the public directory listing is approved. The package includes the `notam-briefing` skill and all 11 hosted tools. Generation requires `briefings:write`; `offline_access` permits continued connection.
+For Claude Code, load the downloaded ZIP with `claude --plugin-dir /absolute/path/to/notamify-plugin.zip`, run `/mcp` and complete Notamify authentication. For Codex or ChatGPT, install from a configured local marketplace or use a custom OAuth MCP connection until the public directory listing is approved. The package includes the `notam-briefing` skill and all 11 hosted tools. Generation requires `briefings:write`.
 
 Muse Code requires its own skills package and user-settings OAuth connection. Its current plugin runtime cannot run the remote MCP definition included in this package. Download the Muse package from the integrations page.
 
