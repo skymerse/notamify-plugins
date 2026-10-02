@@ -37,7 +37,7 @@ The shared OpenAI public directory submission covers ChatGPT and Codex. Anthropi
 
 ```sh
 git clone https://github.com/skymerse/notamify-plugins.git
-muse plugins install ./notamify-plugins/plugins/notamify-muse
+muse skills install ./notamify-plugins/plugins/notamify-muse/skills/notam-briefing --scope user
 ```
 
 Merge `plugins/notamify-muse/settings-example.json` into your existing `~/.config/muse/settings.json`, preserving other settings. Then run:
@@ -46,7 +46,7 @@ Merge `plugins/notamify-muse/settings-example.json` into your existing `~/.confi
 muse mcp login notamify --scope notams:read --scope briefings:write
 ```
 
-Sign in and start a new Muse session. Its current plugin runtime supports this native skills package; the authenticated remote MCP belongs in user settings. Muse has no public plugin catalog yet.
+Sign in and start a new Muse session. This skill installation and OAuth discovery were tested with the public Muse Code 1.4.2 CLI. That build does not expose plugin commands. The archive also includes a native plugin manifest for builds with plugin support; the authenticated remote MCP belongs in user settings. Muse has no public plugin catalog yet.
 
 ## What is included
 
