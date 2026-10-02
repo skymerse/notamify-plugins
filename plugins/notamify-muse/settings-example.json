@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "mcpServers": {
+    "notamify": {
+      "type": "streamable-http",
+      "url": "https://mcp.notamify.com/mcp",
+      "startup_timeout_sec": 30,
+      "tool_timeout_sec": 100
+    }
+  }
+}

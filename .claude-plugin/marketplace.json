@@ -1,0 +1,6 @@
+{
+  "name": "notamify",
+  "metadata": { "description": "Notamify NOTAM source information and informational flight briefings through OAuth SSO." },
+  "owner": { "name": "Skymerse Inc.", "email": "hello@notamify.com" },
+  "plugins": [ { "name": "notamify", "source": "./plugins/notamify" } ]
+}

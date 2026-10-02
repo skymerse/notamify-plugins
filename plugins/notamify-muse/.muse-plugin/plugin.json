@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "name": "notamify",
+  "displayName": "Notamify",
+  "version": "1.1.0",
+  "description": "Retrieve NOTAM source data, affected infrastructure and flight briefings with Notamify SSO. Active Notamify Pro subscription required.",
+  "compat": {
+    "source": "native",
+    "manifestDir": ".muse-plugin"
+  },
+  "capabilities": {
+    "skills": [
+      {
+        "id": "notam-briefing",
+        "path": "skills/notam-briefing/SKILL.md",
+        "enabledDefault": true
+      }
+    ]
+  }
+}

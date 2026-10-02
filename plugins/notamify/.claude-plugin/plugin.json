@@ -1,0 +1,19 @@
+{
+  "name": "notamify",
+  "version": "1.1.0",
+  "description": "Retrieve NOTAM source data, affected infrastructure and flight briefings with Notamify SSO. Active Notamify Pro subscription required.",
+  "author": {
+    "name": "Skymerse Inc.",
+    "email": "hello@notamify.com",
+    "url": "https://notamify.com"
+  },
+  "homepage": "https://mcp.notamify.com/integrations/",
+  "repository": "https://github.com/skymerse/notamify-plugins",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "keywords": [
+    "aviation",
+    "notam",
+    "flight-briefing"
+  ]
+}

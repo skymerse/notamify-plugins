@@ -1,0 +1,12 @@
+{
+  "name": "notamify",
+  "interface": { "displayName": "Notamify" },
+  "plugins": [
+    {
+      "name": "notamify",
+      "source": { "source": "local", "path": "./plugins/notamify" },
+      "policy": { "installation": "AVAILABLE", "authentication": "ON_INSTALL" },
+      "category": "Productivity"
+    }
+  ]
+}
