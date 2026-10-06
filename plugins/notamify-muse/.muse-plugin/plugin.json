@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "name": "notamify",
   "displayName": "Notamify",
-  "version": "1.3.1",
-  "description": "Retrieve NOTAM source data and flight briefings with Notamify SSO. Requires Pro or an existing API agreement; uses existing API credits with a temporary MCP promotion.",
+  "version": "1.3.2",
+  "description": "Search aviation NOTAMs, read source interpretations, and create airport and flight briefings with your Notamify account.",
   "compat": {
     "source": "native",
     "manifestDir": ".muse-plugin"
