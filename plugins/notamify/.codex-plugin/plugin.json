@@ -1,14 +1,15 @@
 {
   "name": "notamify",
-  "version": "1.2.3",
-  "description": "Retrieve NOTAM source data, affected infrastructure and flight briefings with Notamify SSO. Uses existing API credits at discounted MCP rates.",
+  "version": "1.3.0",
+  "description": "Retrieve NOTAM source data and flight briefings with Notamify SSO. Requires Pro or an existing API agreement; uses existing API credits with a temporary MCP promotion.",
   "author": {
     "name": "Skymerse Inc.",
     "email": "hello@notamify.com",
     "url": "https://notamify.com"
   },
-  "homepage": "https://mcp.notamify.com/integrations/",
+  "homepage": "https://notamify.com/account#connections",
   "repository": "https://github.com/skymerse/notamify-plugins",
+  "license": "MIT",
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
   "keywords": [
@@ -19,7 +20,7 @@
   "interface": {
     "displayName": "Notamify",
     "shortDescription": "NOTAMs and flight briefings",
-    "longDescription": "Retrieve current, nearby and historical NOTAMs, inspect affected aviation infrastructure, and generate airport and flight briefings. Preserve original identifiers, validity and conditions while exploring source information. Connect with your existing Notamify account using SSO; operations use your API credits at discounted MCP rates, with pages fetched together charged once. Generated interpretations and briefings are informational and must be checked against official aviation sources before operational use. No customer API key is required. The plugin does not sell subscriptions or make purchases.",
+    "longDescription": "Retrieve current, nearby and historical NOTAMs, inspect affected aviation infrastructure, and generate airport and flight briefings. Preserve original identifiers, validity and conditions while exploring source information. Requires an active Notamify Pro subscription or an existing API agreement. Connect with your existing Notamify account using SSO; operations use your existing API credits. A temporary MCP promotion charges one credit for a query, including pages fetched together, or a generation. Current rates appear in your account and tool descriptions; regular API rates apply when the promotion ends. Generated interpretations and briefings are informational and must be checked against official aviation sources before operational use. No customer API key is required. The plugin does not sell subscriptions or make purchases.",
     "developerName": "Skymerse Inc.",
     "category": "Productivity",
     "capabilities": [
@@ -29,7 +30,7 @@
       "Generate flight briefings"
     ],
     "websiteURL": "https://notamify.com",
-    "supportURL": "https://mcp.notamify.com/integrations/#support",
+    "supportURL": "https://notamify.com/contact",
     "privacyPolicyURL": "https://notamify.com/privacy",
     "termsOfServiceURL": "https://notamify.com/terms",
     "defaultPrompt": [
@@ -46,7 +47,7 @@
       "interface": {
         "displayName": "Notamify",
         "shortDescription": "NOTAMs and flight briefings",
-        "longDescription": "Retrieve current, nearby and historical NOTAMs, inspect affected aviation infrastructure, and generate airport and flight briefings. Preserve original identifiers, validity and conditions while exploring source information. Connect with your existing Notamify account using SSO; operations use your API credits at discounted MCP rates, with pages fetched together charged once. Generated interpretations and briefings are informational and must be checked against official aviation sources before operational use. No customer API key is required. The plugin does not sell subscriptions or make purchases.",
+        "longDescription": "Retrieve current, nearby and historical NOTAMs, inspect affected aviation infrastructure, and generate airport and flight briefings. Preserve original identifiers, validity and conditions while exploring source information. Requires an active Notamify Pro subscription or an existing API agreement. Connect with your existing Notamify account using SSO; operations use your existing API credits. A temporary MCP promotion charges one credit for a query, including pages fetched together, or a generation. Current rates appear in your account and tool descriptions; regular API rates apply when the promotion ends. Generated interpretations and briefings are informational and must be checked against official aviation sources before operational use. No customer API key is required. The plugin does not sell subscriptions or make purchases.",
         "developerName": "Skymerse Inc.",
         "category": "Productivity",
         "capabilities": [
@@ -56,7 +57,7 @@
           "Generate flight briefings"
         ],
         "websiteURL": "https://notamify.com",
-        "supportURL": "https://mcp.notamify.com/integrations/#support",
+        "supportURL": "https://notamify.com/contact",
         "privacyPolicyURL": "https://notamify.com/privacy",
         "termsOfServiceURL": "https://notamify.com/terms",
         "defaultPrompt": [
@@ -71,7 +72,7 @@
       "onboardingSkill": "./skills/notam-briefing/SKILL.md",
       "review": {
         "commerce": false,
-        "commerce_description": "Users consume API credits already in their Notamify account at discounted MCP rates. Insufficient-balance errors explain the requirement and link to an informational guide. The plugin has no subscription, upgrade, checkout or purchase tools or transaction links.",
+        "commerce_description": "Requires an active Notamify Pro subscription or an existing API agreement. Users consume API credits already in their Notamify account under a temporary MCP promotion. Current rates are disclosed by the service; regular API rates apply when the promotion ends. Insufficient-balance errors explain the requirement and link to the Notamify account page. The plugin has no subscription, upgrade, checkout or purchase tools or transaction links.",
         "test_cases": {
           "positive": [
             {
@@ -109,7 +110,7 @@
             {
               "description": "Explain an insufficient credit balance without initiating a purchase",
               "prompt": "I have no API credits left. Use Notamify to retrieve current NOTAMs for EPWA.",
-              "expected_behavior": "Explain that this operation is unavailable with the account's existing credit balance. Link only to the informational MCP credit guide. Do not initiate or promote purchases, subscriptions or upgrades. Briefing status checks and connection management remain available."
+              "expected_behavior": "Explain that this operation is unavailable with the account's existing credit balance. Link only to the Notamify account page for credit requirements and connection management. Do not initiate or promote purchases, subscriptions or upgrades. With active Pro or an existing API agreement, briefing status checks remain free at zero credits. Connection management and revocation remain available after a subscription lapses."
             },
             {
               "description": "Do not certify operational safety",
@@ -125,7 +126,7 @@
         }
       },
       "publication": {
-        "release_notes": "Hosted OAuth SSO, 11 NOTAM and briefing tools, source-preserving briefing skill and native setup packages. Uses existing API credits at discounted MCP rates, with aggregated pages billed once and free briefing polling and accepted flight retries. No Pro subscription or offline-access permission is required. Entitlement messages link to informational requirements without purchase or upgrade flows."
+        "release_notes": "Uses the existing Notamify frontend for sign-in and consent, with connection management at notamify.com/account. The backend owns API credit balances and charges. A configurable temporary promotion charges one credit per aggregated query or generation. Turning it off restores each endpoint's regular API rate, including every fetched page. Current rates appear in consent, account management and tool descriptions; status checks and accepted flight retries remain free. Requires active Pro or an existing API agreement; existing credit packages and expiry rules apply. No separate MCP currency, recurring allowance, customer API key or offline-access permission is introduced. Source queries preserve requested ID filters. Failed flight jobs return their terminal status so assistants can stop polling."
       }
     }
   }
