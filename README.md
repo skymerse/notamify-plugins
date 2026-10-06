@@ -65,7 +65,7 @@ Version 1.3.0 includes the Agent Plugins package in `plugins/notamify`, Codex an
 
 Both packages include an MIT license: [Notamify](plugins/notamify/LICENSE) and [Muse integration](plugins/notamify-muse/LICENSE). The license covers the connector packages; it does not license Notamify data, the backend or hosted service.
 
-This repository distributes the MIT connector packages for repository-based installation. Anthropic has approved and published the [Claude remote MCP connector](https://claude.ai/directory/notamify), whose listing declares Claude web/mobile, Desktop, Code and API support. Claude's portal notes that newly published listings can take up to an hour to appear. OpenAI and the separate Claude Code skill/plugin application remain outstanding; the remote MCP listing is separate from approval of that plugin package.
+This repository distributes the MIT connector packages for repository-based installation. The [Notamify remote MCP connector](https://claude.ai/directory/notamify) is published and visible in Claude's directory as a Community connector, with all 11 tools. Community publication follows automated review and does not carry Anthropic's verified badge. The listing declares Claude web/mobile, Desktop, Code and API support. OpenAI and the separate Claude Code skill/plugin application remain outstanding; the remote MCP listing is separate from approval of that plugin package.
 
 Preserve source identifiers, schedules, conditions, validity and completeness. Interpretations and generated briefings are informational; check current official aviation sources before operational use.
 
