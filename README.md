@@ -65,7 +65,7 @@ Version 1.3.0 includes the Agent Plugins package in `plugins/notamify`, Codex an
 
 Both packages include an MIT license: [Notamify](plugins/notamify/LICENSE) and [Muse integration](plugins/notamify-muse/LICENSE). The license covers the connector packages; it does not license Notamify data, the backend or hosted service.
 
-This repository is currently private, so repository-based installation requires access. Directory submissions and vendor approval remain pending. Marketplace distribution does not imply an official or verified listing. Maintainers must provide an approved distribution source accessible to reviewers before submission.
+This repository distributes the MIT connector packages for repository-based installation. The Claude remote connector is submitted and in review. OpenAI and the separate Claude Code plugin application remain outstanding. Marketplace distribution does not imply an official or verified listing.
 
 Preserve source identifiers, schedules, conditions, validity and completeness. Interpretations and generated briefings are informational; check current official aviation sources before operational use.
 
