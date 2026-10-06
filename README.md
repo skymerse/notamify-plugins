@@ -1,23 +1,16 @@
 # Notamify plugins
 
-Use Notamify coverage, source NOTAMs, interpretations and informational flight briefings in Codex, ChatGPT, Claude web and desktop, Claude Code, and Meta Muse Code.
+Use Notamify NOTAM coverage, interpretations and flight briefings in Codex, ChatGPT, Claude and Meta Muse Code.
 
-Hosted endpoint: `https://mcp.notamify.com/mcp`. Sign in through your existing Notamify account using OAuth SSO with PKCE. An active Notamify Pro subscription or an existing API agreement is required. Operations use your existing API credits and expiry rules. No customer API key is needed.
+Connect with your existing Notamify account. An active Pro subscription or an existing API agreement is required. Usage is charged to your API credit balance.
 
-[Setup, downloads and connected apps](https://notamify.com/account#connections) | [Notamify](https://notamify.com) | [Privacy](https://notamify.com/privacy) | [Terms](https://notamify.com/terms)
+[Setup guide](https://notamify.com/manual/reference/connected-apps) | [Manage connections](https://notamify.com/account#connections) | [Downloads](https://github.com/skymerse/notamify-plugins/releases/latest)
 
 ## Codex
 
 ```sh
 codex plugin marketplace add skymerse/notamify-plugins
 codex plugin add notamify@notamify
-codex mcp login notamify --scopes notams:read,briefings:write
-```
-
-Complete Notamify sign-in and review the requested permissions. A direct server connection is also available:
-
-```sh
-codex mcp add notamify --url https://mcp.notamify.com/mcp
 codex mcp login notamify --scopes notams:read,briefings:write
 ```
 
@@ -28,15 +21,11 @@ claude plugin marketplace add skymerse/notamify-plugins
 claude plugin install notamify@notamify
 ```
 
-Run `/mcp` and complete Notamify authentication. To use a downloaded package for one session, run `claude --plugin-dir /absolute/path/to/notamify-plugin.zip`.
+Run `/mcp` and sign in to Notamify.
 
-## ChatGPT
+## ChatGPT and Claude
 
-Open Plugins, choose Add, then Create custom MCP server. Enter the hosted endpoint above, select OAuth, review the warning and choose Create as plugin. Sign in through Notamify and approve the requested access. In a new ChatGPT conversation, select your Notamify plugin with `@`.
-
-## Claude web and desktop
-
-Add a custom connector with the hosted endpoint above and complete Notamify sign-in. Read-only consent supports source queries. Generating briefings additionally requires `briefings:write`; approve that permission when requested.
+Add `https://mcp.notamify.com/mcp` as a remote MCP connector, choose OAuth and sign in to Notamify. Claude users can also connect through the [Notamify directory listing](https://claude.ai/directory/notamify).
 
 ## Meta Muse Code
 
@@ -45,28 +34,22 @@ git clone https://github.com/skymerse/notamify-plugins.git
 muse skills install ./notamify-plugins/plugins/notamify-muse/skills/notam-briefing --scope user
 ```
 
-Merge `plugins/notamify-muse/settings-example.json` into your existing `~/.config/muse/settings.json`, preserving other settings, then run:
+Merge `plugins/notamify-muse/settings-example.json` into `~/.config/muse/settings.json`, preserving your other settings. Then connect and start a new Muse session:
 
 ```sh
 muse mcp login notamify --scope notams:read --scope briefings:write
 ```
 
-Sign in and start a new Muse session. Skill installation/discovery and production OAuth/startup/revocation passed with the public Muse Code 1.4.3 CLI. The model-driven tool test remains pending because Meta Google device login failed and the operator chose to defer it. That build does not expose plugin commands. The package also includes a native plugin manifest for builds with plugin support; its remote MCP connection belongs in user settings. Muse currently has no documented public plugin catalog.
+## Usage
 
-## API credits and account management
+The temporary MCP promotion charges one API credit per query operation, including pages fetched together, or per generation. Status checks and retries of accepted flight requests are free. One prompt may trigger multiple operations. Current rates appear in your [account](https://notamify.com/account#connections).
 
-The temporary MCP promotion charges one API credit per query operation, including pages fetched together, or per generation. Briefing status polling and retries of an accepted flight request are free. Your assistant may make several tool calls for one prompt; each operation is billed separately. Current rates appear in your account and tool descriptions. Regular API rates apply when the promotion ends.
+Manage connections and revoke access in [Account settings](https://notamify.com/account#connections).
 
-View connected apps and revoke their access at [Notamify Account settings](https://notamify.com/account#connections). Existing credit packages, balances, expiry rules and subscription terms remain unchanged.
+Interpretations and generated briefings are informational. Verify operational decisions against current official aviation sources.
 
-## Packages and licensing
+## License and support
 
-Version 1.3.0 includes the Agent Plugins package in `plugins/notamify`, Codex and Claude marketplace manifests, and the Muse skill/settings package in `plugins/notamify-muse`. The hosted server provides 11 tools for current, nearby and historical NOTAMs, full record detail, affected infrastructure, airport briefings, flight priority assessment and asynchronous flight briefings.
+Connector packages are licensed under MIT: [Notamify](plugins/notamify/LICENSE) and [Muse integration](plugins/notamify-muse/LICENSE). Notamify data and the hosted service are covered by the [Terms](https://notamify.com/terms) and [Privacy policy](https://notamify.com/privacy).
 
-Both packages include an MIT license: [Notamify](plugins/notamify/LICENSE) and [Muse integration](plugins/notamify-muse/LICENSE). The license covers the connector packages; it does not license Notamify data, the backend or hosted service.
-
-This repository distributes the MIT connector packages for repository-based installation. The [Notamify remote MCP connector](https://claude.ai/directory/notamify) is published and visible in Claude's directory as a Community connector, with all 11 tools. Community publication follows automated review and does not carry Anthropic's verified badge. The listing declares Claude web/mobile, Desktop, Code and API support. OpenAI and the separate Claude Code skill/plugin application remain outstanding; the remote MCP listing is separate from approval of that plugin package.
-
-Preserve source identifiers, schedules, conditions, validity and completeness. Interpretations and generated briefings are informational; check current official aviation sources before operational use.
-
-Support: [hello@notamify.com](mailto:hello@notamify.com).
+Contact [hello@notamify.com](mailto:hello@notamify.com).
