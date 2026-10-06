@@ -99,7 +99,7 @@
         }
       },
       "publication": {
-        "release_notes": "Uses the existing Notamify frontend for sign-in and consent, with connection management at notamify.com/account. The backend owns API credit balances and charges. A configurable temporary promotion charges one credit per aggregated query or generation. Turning it off restores each endpoint's regular API rate, including every fetched page. Current rates appear in consent, account management and tool descriptions; status checks and accepted flight retries remain free. Requires active Pro or an existing API agreement; existing credit packages and expiry rules apply. No separate MCP currency, recurring allowance, customer API key or offline-access permission is introduced. Source queries preserve requested ID filters. Failed flight jobs return their terminal status so assistants can stop polling."
+        "release_notes": "Connect Notamify to your assistant with your existing account. Search NOTAMs, generate flight briefings, and manage access in Account settings."
       }
     }
   },
