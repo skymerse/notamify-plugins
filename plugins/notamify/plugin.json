@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "notamify",
-  "version": "1.3.1",
-  "description": "Retrieve NOTAM source data and flight briefings with Notamify SSO. Requires Pro or an existing API agreement; uses existing API credits with a temporary MCP promotion.",
+  "version": "1.3.2",
+  "description": "Search aviation NOTAMs, read source interpretations, and create airport and flight briefings with your Notamify account.",
   "author": {
     "name": "Skymerse Inc.",
     "email": "hello@notamify.com",
@@ -20,7 +20,7 @@
       "interface": {
         "displayName": "Notamify",
         "shortDescription": "NOTAMs and flight briefings",
-        "longDescription": "Retrieve current, nearby and historical NOTAMs, inspect affected aviation infrastructure, and generate airport and flight briefings. Preserve original identifiers, validity and conditions while exploring source information. Requires an active Notamify Pro subscription or an existing API agreement. Connect with your existing Notamify account using SSO; operations use your existing API credits. A temporary MCP promotion charges one credit for a query, including pages fetched together, or a generation. Current rates appear in your account and tool descriptions; regular API rates apply when the promotion ends. Generated interpretations and briefings are informational and must be checked against official aviation sources before operational use. No customer API key is required. The plugin does not sell subscriptions or make purchases.",
+        "longDescription": "Bring Notamify into your aviation research and briefing workflow. Search current, nearby and historical NOTAMs, read their interpretations, inspect affected infrastructure, and create airport and flight briefings. Results preserve original NOTAM identifiers, validity and conditions so you can check the source. Connect your existing Notamify account and manage access in Account settings. Interpretations and generated briefings are informational; verify official aviation sources before operational use.",
         "developerName": "Skymerse Inc.",
         "category": "Productivity",
         "capabilities": [
