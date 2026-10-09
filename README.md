@@ -29,6 +29,8 @@ Add `https://mcp.notamify.com/mcp` as a remote MCP connector, choose OAuth and s
 
 ## Meta Muse Code
 
+Install [Muse Code](https://dev.meta.ai/docs/muse-code) and complete its [model sign-in and billing setup](https://dev.meta.ai/docs/muse-code/auth) first. Muse model access and Notamify API credits are billed separately. These instructions apply to the Muse Code terminal client.
+
 ```sh
 git clone https://github.com/skymerse/notamify-plugins.git
 muse skills install ./notamify-plugins/plugins/notamify-muse/skills/notam-briefing --scope user
@@ -39,6 +41,8 @@ Merge `plugins/notamify-muse/settings-example.json` into `~/.config/muse/setting
 ```sh
 muse mcp login notamify --scope notams:read --scope briefings:write
 ```
+
+For the complete settings example, read-only access, example prompts and connection management, see the [Muse Code setup guide](plugins/notamify-muse/README.md).
 
 ## Usage
 
