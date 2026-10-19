@@ -1,6 +1,6 @@
 {
   "name": "notamify",
-  "version": "1.3.2",
+  "version": "1.3.4",
   "description": "Search aviation NOTAMs, read source interpretations, and create airport and flight briefings with your Notamify account.",
   "author": {
     "name": "Skymerse Inc.",
