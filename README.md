@@ -25,7 +25,7 @@ Run `/mcp` and sign in to Notamify.
 
 ## ChatGPT and Claude
 
-Add `https://mcp.notamify.com/mcp` as a remote MCP connector, choose OAuth and sign in to Notamify. Claude users can also connect through the [Notamify directory listing](https://claude.ai/directory/notamify).
+Install Notamify from the [ChatGPT plugin directory](https://chatgpt.com/plugins/plugin_asdk_app_6ac52ef95164819199c7031243e206bf) or the [Claude directory](https://claude.ai/directory/notamify) and sign in to Notamify. You can also add `https://mcp.notamify.com/mcp` as a remote MCP connector and choose OAuth.
 
 ## Meta Muse Code
 
